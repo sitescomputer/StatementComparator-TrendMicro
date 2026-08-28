@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.codex_work/
+.venv-build/
+.python-build/
+.gh-cli/
+.gh-cli.zip
+build/
+dist/
+*.spec
+TrendMicro_Billing_Comparison_*.csv
+CustomerSummary-TrendMicroMSP-*.xlsx
+AutoMailprotector.py
