@@ -1,6 +1,6 @@
 # Trend Micro Billing Comparator
 
-A small desktop program for comparing two monthly Trend Micro MSP customer-summary workbooks. It follows the comparison style of `AutoMailprotector.py`, but reads Trend Micro `.xlsx` files directly.
+A small desktop program for comparing two monthly Trend Micro MSP customer-summary workbooks.
 
 The comparator focuses on:
 
@@ -11,7 +11,13 @@ The comparator focuses on:
 
 It supports both the original complete Trend Micro download and carved-down workbooks, provided the file still contains the **Customer**, **Service Plan**, **Provisioned**, and **Used** columns. The program locates the header automatically, ignores total rows, and uses the Customer ID when both files include it. Otherwise, it matches customers by a normalized customer name.
 
-## Run the program
+## Download the Windows app
+
+Download the latest version from the [GitHub Releases page](https://github.com/sitescomputer/StatementComparator-TrendMicro/releases/latest), or download [TrendMicroComparator.exe](https://github.com/sitescomputer/StatementComparator-TrendMicro/releases/latest/download/TrendMicroComparator.exe) directly.
+
+No Python installation is required. Save the EXE anywhere on your computer and double-click it to run. Because the application is currently unsigned, Windows may display a SmartScreen warning. Only continue if you downloaded the file from this repository's official release page.
+
+## Run from source
 
 Install Python 3.11 or newer, then run:
 
@@ -56,5 +62,3 @@ dist\TrendMicroComparator.exe
 The EXE is a single-file, windowed application suitable for attaching to a GitHub release. Windows may show a SmartScreen warning for unsigned internal applications; code-signing the final EXE avoids that warning.
 
 The included GitHub Actions workflow also builds the EXE on demand. Pushing a tag such as `v1.0.0` builds the program and attaches it to that tag's GitHub release.
-
-> **Privacy note:** Trend Micro billing files contain customer information. The supplied `.gitignore` excludes `CustomerSummary-TrendMicroMSP-*.xlsx`; keep the repository private or confirm that no customer workbooks or generated comparisons are committed before publishing it.
